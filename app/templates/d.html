@@ -1,0 +1,39 @@
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Descricao</title>
+<style>
+    body{
+        background-image: url({% static 'fuu2.jpg'%})
+    }
+   .quadro{
+    width:300px;
+    height:400px;
+    background-color:black;
+    margin:auto;
+    color:blue;
+   }  
+</style>
+</head>
+<body>
+<div class='quadro'>
+<code>
+  <pre>
+      {% for i in lg%}
+       <strong>{{i.escrevadescricao}}</strong>
+      {% endfor %}
+  </pre>
+
+</code>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

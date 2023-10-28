@@ -1,0 +1,375 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Bingo</title>
+
+    <style>
+      body{
+        background-image: url({% static 'fuu2.jpg'%})
+       
+      }
+     .i{
+        width:350px;
+        height:500px;
+       
+        margin:auto;
+
+     }
+     .recado{
+        width:100px;
+        height:40px;
+        color:red;
+        margin:auto;
+     }
+     .env{
+        width:176px;
+        height:150px;
+   
+        margin:auto;
+     }
+     .numeros{
+        width:300px;
+        height:80px;
+        border: 3px solid #88888888;
+       
+        color:red;
+        margin:auto;
+        overflow:auto;
+        
+     }
+     .quadros{
+         width:100%;
+         max-width:300px;
+         height:200px;
+        
+         margin:auto;
+         overflow:auto;
+         
+     }
+     .r{
+        width:900px;
+        height:180px;
+        background-color:lime;
+     }
+     .a1{
+       width:300px;
+       height:180px;
+       background-color:black;
+       float:left;
+     }
+     .a2{
+       width:300px;
+       height:180px;
+       background-color:blue;
+       float:left;
+     }
+     .a3{
+       width:300px;
+       height:180px;
+       background-color:pink;
+       float:left;
+     }
+  
+     main{
+      width:80%;
+      height:400px;
+      margin:auto;
+     
+     }
+     .x{
+      width:49%;
+      height:400px;
+      border:1px solid #88888888;
+      float:left;
+      overflow:auto;
+      color:lime;
+     }
+     .x2{
+      width:49%;
+      height:400px;
+      border:1px solid #88888888;
+      float:left;
+      overflow:auto;
+      
+     }
+   ul,li{
+       margin:-12px;
+   }
+  
+   li{
+       color:black;
+       width:200%;
+       height:20px;
+       background-color:red;
+   }
+   .top{
+     width:90%;
+     height:30px;
+     margin:auto;
+   }
+   .ix{
+     width:30px;
+     height:30px;
+     margin:auto;
+     display:none;
+     background-color:red;
+   }
+   .ix2{
+     width:40px;
+     height:30px;
+     background-color:black;
+     margin:auto;
+     display:none;  
+   }
+  .n{
+    color:red;
+  }
+  .cabe{
+    width:80%;
+    height:30px;
+   
+    margin:auto;
+    
+  }
+  .c1{
+    width:20%;
+    height:30px;
+    color:red;
+    
+  }
+  .lili{
+    color:black;
+    background-color:lime;
+  }
+  .nj{
+    color:black;
+  }
+  .logo{
+    width:40%;
+    height:100px;
+    margin:auto;
+
+  }
+  .nsortiado{
+    width:9%;
+    height:20px;
+    margin-left:50px;
+    color:red;
+  }
+  .l{
+    margin:auto;
+    width:38px;
+    height:20px;
+    font-size:12px;
+
+  }
+
+    </style>
+</head>
+<body>
+  <div class='cabe'>
+    <div class='c1'><strong onclick='n()'>{{sr}}</strong></div>
+    
+  </div>
+  <br>
+  <div class='logo'><img src={% static 'll.webp'%}  width='100%' height='100%' /></div>
+  <br>
+  <div class="top">
+    <div class="ix" onclick="fecha()" >
+      <img src={% static 'xx.png'%} width="100%" height="100%"/>
+    </div>
+    <div class="ix2" onclick="">....</div>
+  </div>
+
+  <br>
+    <header>
+                <div class='descricao1'><mark style='background-color:white;'><a href={% url 'descri1'%}>(Descricao)</a></mark>
+                </div>
+                <div class='quadros'>
+                  <div class='r'>
+                    <div class="a1" onclick="aa1()">
+                      <img src={% static 'carro1.jpg'%} width="100%" height="100%"/>
+                    </div>
+                    <div class="a2" >
+                      <img src={% static 'carro2.jpg'%} width="100%" height="100%"/>
+                    </div>
+                    <div class="a3" >
+                      
+                      <img src={% static 'carro3.jpg'%} width="100%" height="100%"/>
+                    </div>
+          
+                  </div>
+
+                </div> 
+       
+
+    </header>
+    
+
+   <nav>
+    <div class='i'>
+        <div class='recado'><small><u>Data do Concurso:
+          {% for kll in ch %}
+            {{kll.d}}
+          {% endfor %}
+        </u></small></div>
+        
+        <div class='jk'>Link Do video do sorteio:--- <small>
+          {% for kll in ch %}
+           {{kll.video}}
+          {% endfor %}
+        </small></div>
+ 
+        <br>
+        <div class='numeros'>
+         <code>
+          (01) (02) (03) (04) (05) (06)
+          (07) (08) (09) (10) (11) (12) (13)
+          (14) (15) (16) (17) (18) (19)
+          (20) (21) (22) (23) (24) (25)
+          (26) (27) (28) (29) (30) (31)
+          (32) (33) (34) (35) (36) (37)
+          (38) (39) (40) (41) (42) (43)
+          (44) (45) (46) (47) (48) (49)
+          (50) (51) (52) (53) (54) (55)
+          (56) (57) (58) (59) (60) (61)
+          (62) (63) (64) (65) (66) (67)
+          (68) (69) (70) (71) (72) (73)
+          (74) (75) (76) (77) (78) (79)
+          (80) (81) (82) (83) (84) (85)
+          (86) (87) (88) (89) (90) (91)
+          (92) (93) (94) (95) (96) (97)
+          (98) (99) ()
+
+
+         </code>
+
+        </div>
+        
+        <br>
+        <div class='env'>
+         <form action='' method='POST'>
+           {%  csrf_token %}
+           <small>{{hx}}</small>
+           <small style='color:orange;'>{{h}}</small>
+          <input type='text' name='nome' placeholder='Nome completo' />
+          <br>
+          <br>
+           <small class='n'>{{ty}}</small>
+          <input type='number' name='numero' placeholder='Numero da sorte ' onclick='cuidado()' required />
+          <br>
+          <br>
+          <input type='text' name='num' placeholder='Contato' />
+          <br>
+          <br>
+          <button onclick='alertar()'>Salvar e comprar</button>
+
+         </form>
+      </div>
+      </div>
+
+
+
+ 
+   </nav>
+  
+   <main>
+      <strong style='color:white;'>===Numero Sortiado===</strong>
+      <div class='nsortiado'>
+       <div class='l'>
+        {% for kll in ch %}
+         {{kll.n}}
+      {% endfor %}
+       </div>
+      </div>
+      <br>
+     
+      <div class='x'> 
+         <strong class='nj'><i style='color:white;'>Nao pagos..</i></strong>
+        <ul>
+          <pre> 
+           {% for xc in mostraa %}
+            <li>{{xc.nomeunico}}</li>
+           {% endfor %}
+          </pre>
+        </ul>
+        
+      </div>
+      <div class='x2'>  <strong><i style="color:white;">Pagamento efetuado..</i></strong>
+        <ul>
+          <pre> 
+           {% for xc in ad %}
+            <li class='lili'>{{xc.dicionar}}</li>
+           {% endfor %}
+          </pre>
+        </ul>
+      
+      </div>
+   
+   </main>
+  
+  <script>
+      function aa1(){
+        document.querySelector(".a1").style.position = "absolute";
+        document.querySelector(".a1").style.width = "300px";
+        document.querySelector(".a1").style.height = "300px"; 
+        document.querySelector(".ix").style.display = "flex";
+      }
+      
+      function fecha(){
+        
+          document.querySelector(".ix").style.display = "none";
+          document.querySelector(".a1").style.position = "static";
+          document.querySelector(".a1").style.width = "300px";
+          document.querySelector(".a1").style.height = "180px";
+        
+          document.querySelector(".ix").style.display = "none";
+          document.querySelector(".a2").style.position = "static";
+          document.querySelector(".a2").style.width = "300px";
+          document.querySelector(".a2").style.height = "180px";
+          
+        
+          document.querySelector(".ix").style.display = "none";
+          document.querySelector(".a3").style.position = "static";
+          document.querySelector(".a3").style.width = "300px";
+          document.querySelector(".a3").style.height = "180px";
+ 
+      }
+    
+      document.querySelector(".a2").addEventListener("click",function(){
+        
+        document.querySelector(".a2").style.position = "absolute";
+        document.querySelector(".a2").style.width = "300px";
+        document.querySelector(".a2").style.height = "300px"; 
+        document.querySelector(".ix").style.display = "flex";
+      })
+  
+  
+  
+      document.querySelector(".a3").addEventListener("click",function(){
+        
+        document.querySelector(".a3").style.position = "absolute";
+        document.querySelector(".a3").style.width = "300px";
+        document.querySelector(".a3").style.height = "300px"; 
+        document.querySelector(".ix").style.display = "flex";
+      })
+  
+      function alertar(){
+         
+        alert('Após a escolha do seu\nNúmero entre em contato com\nAdministrador para esta efetuando o processo do seu pagamento.\nContato admin:(34) 9 9810-8832.\nNome admin: PAULO HENRIQUE MARTINS RAIMUNDO.')
+      }
+      function cuidado(){
+        alert('Escolha seu número é o Verifique novamente pois não podera trocar. Basta clicar e escolher em caso de dúvida entra em contato Somente com o nosso Administrador!.')
+      }
+
+      function n(){
+        let v = {{sr}}
+   
+
+        alert('Seu Numero')
+      }
+  </script>
+</body>
+</html>

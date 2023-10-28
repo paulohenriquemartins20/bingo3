@@ -1,0 +1,73 @@
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>numerospessoas</title>
+<style>
+  body{
+    background-image: url({% static 'bi.jpg'%})
+  }
+  header{
+    width:230px;
+    height:30px;
+   
+    margin:auto;
+  }
+  nav{
+    width:150px;
+    height:40px;
+    margin:auto;
+    border:1px solid blue;
+  }
+
+  ul,li{
+    list-style:none;
+    margin:0px;
+   
+  }
+  .f{
+    width:100px;
+    height:40px;
+    background-color:black;
+    padding-right:50px;
+    overflow:auto;
+    color:lime;
+
+  }
+</style>
+</head>
+
+
+
+
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<header>
+ 
+<form action='./' method='POST'>
+ {% csrf_token %}
+ <input type='text' name='pes' placeholder='digite numero' required />
+
+ <button>.....</button>
+</form>
+</header>
+<br>
+<nav>
+ <div class='f'> 
+  <ul>
+   {% for pe in oooo%}
+    
+   <li>{{pe}}</li>
+
+   {% endfor %}
+  </ul>
+</div>
+</nav>
+</body>
+</html>
